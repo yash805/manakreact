@@ -21,19 +21,8 @@ function Form(){
 
     return(
         <div>
-            <form onSubmit={data}>
-                <input type="text" placeholder="enter name" onChange={users}/> {userErr ? <span>not Valid</span>: null}
-                 <br /><br />
-                <input type="text" placeholder="enter password"/> <br /><br />
-
-                <select>
-                    <option>Rice</option>
-                    <option>Water</option>
-                    <option>Vegetables</option>
-                </select>
-                <input type="checkbox" /><span>Accept terms and conditions</span>
-                <button type="submit">submit</button>
-            </form>
+          
+           
         </div>
     )
 }
