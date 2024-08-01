@@ -1,12 +1,16 @@
+import { Provider } from 'react-redux';
 import './App.css';
-import Form from './Form';
+import BoContainer from './reduxs/BoContainer';
+import store from './reduxs/Store';
 
 function App() {
 
     return (
+    <Provider store={store}>
     <div className="App">
-     <Form />
+     <BoContainer />
     </div>  
+    </Provider>
   );
 }
 

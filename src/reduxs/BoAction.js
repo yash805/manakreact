@@ -1,7 +1,11 @@
-import { buyBook } from "./Types"
+import { buyBook } from "./Types";
 
-const purchase =()=>{
-    return{
-        type : buyBook
-    }
+ function purchase(quantity) {
+    return {
+        type: buyBook,
+        payload: quantity,
+    };
 }
+
+
+export default purchase

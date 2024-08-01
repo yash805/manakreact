@@ -6,7 +6,7 @@ const initialState={
 const BoReducer = (state=initialState,action)=>{
    switch(action.type){
     case buyBook: return{
-        ...state, NoOfBooks: state.initialState -1
+        ...state, NoOfBooks: state.NoOfBooks -action.payload,
     }
     default: return state
    }
