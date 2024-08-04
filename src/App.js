@@ -1,17 +1,28 @@
-import { Provider } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
-import Counter from './reduxtool/Counter';
-import store from './reduxtool/Store';
+import { fetchTodo } from './thunk/slice/Todo';
 
 function App() {
+       const state = useSelector(state=> state)
+       console.log("state",state)
+       const dispatch = useDispatch()
 
+       if(state.todo.Loading){
+        return <h1>Loading...</h1>
+       }
     return (
-    <Provider store={store}>
+   
     <div className="App">
-      <h1>hello</h1>
-     <Counter />
+      
+      <button onClick={()=> dispatch(fetchTodo())}>fetch</button>
+      {
+        state.todo.data && state.todo.data.map((e)=> (
+        <li>{e.title}</li>
+      ))
+      }
     </div>  
-    </Provider>
+   
   );
 }
 
