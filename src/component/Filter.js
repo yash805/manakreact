@@ -13,7 +13,7 @@ const Filter = () => {
       <h1>Filter page</h1>
       <h3>{age}</h3>
       <h2>{city}</h2>
-      <input type="text" onChange={(e)=>setSearchParams({text:e.target.value})} />
+      <input type="text" onChange={(e)=>setSearchParams({text:e.target.value,age:10})} />
       <button  onClick={(e)=>setSearchParams({age:20})}>click</button>
     </div>
   )
